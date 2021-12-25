@@ -1,0 +1,93 @@
+snippet rg
+Route::get('${1}', '${2}');
+endsnippet
+
+snippet rga
+Route::get('${1}', function(${2}){
+	${3}
+});
+endsnippet
+
+snippet rp
+Route::get('${1}', '${2}');
+endsnippet
+
+snippet rpa
+Route::post('${1}', function(${2}){
+	${3}
+});
+endsnippet
+
+snippet ti "Type a this" i
+$this->${1}
+endsnippet
+
+snippet this "Type a this"
+$this->${1}
+endsnippet
+
+# protected function
+snippet pmet 
+protected function ${1}($2)
+{
+    ${0}
+}
+endsnippet
+
+snippet met 
+public function ${1}(${2})
+{
+    ${3}
+}
+endsnippet
+
+snippet tf "create a test method"
+/** @test */
+public function ${1}()
+{
+    ${2}
+}
+endsnippet
+
+snippet testclass 
+<?php
+
+namespace Tests\Unit;
+
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
+
+class ${1}Test extends TestCase
+{
+    use DatabaseMigrations;
+	
+    ${2}
+}
+endsnippet
+
+snippet efactory 
+$${2} = factory(${1}::class)->create();
+endsnippet
+
+snippet ifactory
+factory(${1}::class)->create();
+endsnippet
+
+snippet php
+<?php
+
+class `Filename()`${1} {
+	${2}
+}
+endsnippet
+
+snippet phut
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class `Filename()`${1} extends TestCase
+{
+	${2}
+}
+endsnippet
