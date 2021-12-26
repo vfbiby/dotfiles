@@ -5,6 +5,8 @@
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
 
+# split current window horizontally
+bind C-s set -g status
 # -- navigation ----------------------------------------------------------------
 
 # if you're running tmux within iTerm2
