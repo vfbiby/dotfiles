@@ -13,8 +13,8 @@ inoremap ? ?<c-g>u
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-inoremap <C-j> <Esc>:m .+1<CR>==i
-inoremap <C-k> <Esc>:m .-2<CR>==i
+"inoremap <C-j> <Esc>:m .+1<CR>==i
+"inoremap <C-k> <Esc>:m .-2<CR>==i
 "nnoremap <SPace>j :m .+1<CR>==
 "nnoremap <SPace>k :m .-2<CR>==
 
@@ -131,7 +131,7 @@ inoremap <C-k> <Esc>:m .-2<CR>==i
         Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         "let g:coc_global_extensions = ['coc-vimlsp', 'coc-java', 'coc-snippets', 'coc-phpactor', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-phpls']
-        let g:coc_global_extensions = ['coc-vimlsp', 'coc-java', 'coc-snippets', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver']
+        let g:coc_global_extensions = ['coc-vimlsp', 'coc-java', 'coc-explorer', 'coc-snippets', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver']
         Plug 'mileszs/ack.vim'
         Plug 'rking/ag.vim'
         Plug 'Chun-Yang/vim-action-ag'
