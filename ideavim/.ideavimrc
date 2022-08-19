@@ -1,0 +1,132 @@
+inoremap <c-e> <c-o>$
+inoremap <c-a> <c-o>^
+nmap <Space>jn i<CR><Esc>
+nmap <Space>jo i<CR><Esc>k$
+nmap <Space>sv :vsp<CR>
+nmap <Space>sg :sp<CR>
+nmap <Space>sq :q<CR>
+nmap <Space>sQ :qa<CR>
+nmap U <c-r>
+nmap <Space>sa ggVG
+nmap <Leader><Space> :nohl<CR>
+nmap <Space><CR> o<Esc>
+nmap <leader><Space> O<Esc>
+"nmap <c-h> <c-w>h
+"nmap <c-j> <c-w>j
+"nmap <c-k> <c-w>k
+"nmap <c-l> <c-w>l
+set clipboard=unnamed
+map Y y$
+map D d$
+set ignorecase
+set smartcase
+"set nu
+"set rnu
+set sneak
+set ideajoin
+set surround
+set matchit
+"set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set exchange
+set argtextobj
+set highlightedyank
+set which-key
+" -- which key --
+"set notimeout
+"let g:WhichKey_ShowVimActions = "true"
+set timeoutlen = 5000
+"set vim-paragraph-motion
+set NERDTree
+"set vim-textobj-entire
+set clipboard+=ideaputset ideajoinset clipboard+=ideaput
+set quickscope
+"set multicursor
+
+nmap H :action PreviousTab<CR>
+nmap L :action NextTab<CR>
+
+nmap <C-m> :action SelectNextOccurrence<cr>
+xmap <C-m> :action SelectNextOccurrence<cr>
+nmap <C-s> :action FindNext<cr>
+xmap <C-s> :action FindNext<cr>
+"FindPrevious
+nmap <C-o> :action UnselectPreviousOccurrence<cr>
+xmap <C-o> :action UnselectPreviousOccurrence<cr>
+nmap <S-C-m> :action SelectAllOccurrences<cr>
+xmap <S-C-m> :action SelectAllOccurrences<cr>
+
+" Do incremental searching.
+set incsearch
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+"Move code up and down
+inoremap <c-j> <Esc>:action MoveStatementDown<CR>i
+inoremap <c-k> <Esc>:action MoveStatementUp<CR>i
+vnoremap J :action MoveStatementDown<CR>
+vnoremap K :action MoveStatementUp<CR>
+
+inoremap <c-l> <Esc>:action EditorCompleteStatement<CR>
+nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
+vnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+"nnoremap <leader>t :action TerminalOpenInTerminal<CR>
+nnoremap <Space>q :action HideActiveWindow<CR>
+nnoremap <leader>e :e ~/.ideavimrc<CR>
+"nnoremap <leader>kr :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap <leader>n :action ContextRun<CR>
+nnoremap <leader>b :action ShowNavBar<CR>
+nnoremap <leader>c :action ChooseRunConfiguration<CR>
+nnoremap <leader>d :action ChooseDebugConfiguration<CR>
+nnoremap <leader>s :action FileStructurePopup<CR>
+nnoremap <Space>r :action RenameElement<CR>
+nnoremap <Space>kr :action RunAnything<CR>
+nnoremap <Space>kn :action ContextRun<CR>
+nnoremap <Space>kc :action RunClass<CR>
+nnoremap <Space>f :action GotoFile<CR>
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>h :action HideAllWindows<CR>
+nnoremap <Space>kf :action RerunFailedTests<CR>
+nnoremap <Space>w :action GotoNextError<CR>
+nnoremap <Space>b :action GotoPreviousError<CR>
+nnoremap <Space>u :action FindUsages<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+"nnoremap <Space>u :action ShowUsages<CR>
+"gD可以替代这个
+
+"Refactor
+nnoremap <Space>n :action Inline<CR>
+vnoremap <Space>n :action Inline<CR>
+nnoremap <Space>m :action ExtractMethod<CR>
+vnoremap <Space>m :action ExtractMethod<CR>
+nnoremap <Space>v :action IntroduceVariable<CR>
+vnoremap <Space>v :action IntroduceVariable<CR>
+nnoremap <Space>i :action ShowIntentionActions<CR>
+nnoremap <Space>e :action ReformatCode<CR>
+
+nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
+nnoremap <Space>kh :action TypeHierarchy<CR>
+
+
+"nnoremap gc :action GotoClass<CR>
+nnoremap gI :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+
+nnoremap <leader>f :action FindInPath<CR>
+
+if &ide =~? 'intellij idea'
+nnoremap <leader>r :action ExternalSystem.ProjectRefreshAction<CR>
+elseif &ide =~? 'clion'
+nnoremap <Space>v :action CIDR.Lang.IntroduceVariable<CR>
+nnoremap <Space>km :action CMake.ReloadCMakeProject<CR>
+nnoremap <leader>m :action CMake.ReloadCMakeProject<CR>
+elseif &ide =~? 'Android Studio'
+nnoremap <leader>r :action Android.SyncProject<CR>
+nnoremap <Space>kn :action RunContextGroup<CR>
+nnoremap <leader>n :action RunContextGroup<CR>
+nnoremap <Space>km :action MakeGradleProject<CR>
+endif
+set clipboard+=ideaput
