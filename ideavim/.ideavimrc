@@ -6,7 +6,6 @@ nmap <Space>sv :vsp<CR>
 nmap <Space>sg :sp<CR>
 nmap <Space>sq :q<CR>
 nmap <Space>sQ :qa<CR>
-nmap U <c-r>
 nmap <Space>sa ggVG
 nmap <Leader><Space> :nohl<CR>
 nmap <Space><CR> o<Esc>
@@ -47,8 +46,8 @@ set quickscope
 nmap H :action PreviousTab<CR>
 nmap L :action NextTab<CR>
 
-nmap <C-m> :action SelectNextOccurrence<cr>
-xmap <C-m> :action SelectNextOccurrence<cr>
+"nmap <C-m> :action SelectNextOccurrence<cr>
+"xmap <C-m> :action SelectNextOccurrence<cr>
 nmap <C-s> :action FindNext<cr>
 xmap <C-s> :action FindNext<cr>
 "FindPrevious
@@ -81,7 +80,6 @@ nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <leader>c :action ChooseRunConfiguration<CR>
 nnoremap <leader>d :action ChooseDebugConfiguration<CR>
 nnoremap <leader>s :action FileStructurePopup<CR>
-nnoremap <Space>r :action RenameElement<CR>
 nnoremap <Space>kr :action RunAnything<CR>
 nnoremap <Space>kn :action ContextRun<CR>
 nnoremap <Space>kc :action RunClass<CR>
@@ -102,11 +100,19 @@ nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 nnoremap <Space>n :action Inline<CR>
 vnoremap <Space>n :action Inline<CR>
 nnoremap <Space>m :action ExtractMethod<CR>
+nnoremap <c-m> :action ExtractMethod<CR>
 vnoremap <Space>m :action ExtractMethod<CR>
+vnoremap <c-m> :action ExtractMethod<CR>
 nnoremap <Space>v :action IntroduceVariable<CR>
 vnoremap <Space>v :action IntroduceVariable<CR>
 nnoremap <Space>i :action ShowIntentionActions<CR>
+nnoremap <c-i> :action ShowIntentionActions<CR>
 nnoremap <Space>e :action ReformatCode<CR>
+nnoremap <Space>r :action RenameElement<CR>
+nnoremap <c-r> :action RenameElement<CR>
+nmap U :action $Redo<CR>
+nnoremap <Space>p :action IntroduceParameter<CR>
+nnoremap <Space>c :action ExtractClass<CR>
 
 nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 nnoremap <Space>kh :action TypeHierarchy<CR>
