@@ -11,10 +11,10 @@ nmap <Space>sa ggVG
 nmap <Leader><Space> :nohl<CR>
 nmap <Space><CR> o<Esc>
 nmap <leader><Space> O<Esc>
-"nmap <c-h> <c-w>h
-"nmap <c-j> <c-w>j
-"nmap <c-k> <c-w>k
-"nmap <c-l> <c-w>l
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
 set clipboard=unnamed
 map Y y$
 map D d$
@@ -90,7 +90,9 @@ nnoremap <leader>a :action GotoAction<CR>
 nnoremap <leader>h :action HideAllWindows<CR>
 nnoremap <Space>kf :action RerunFailedTests<CR>
 nnoremap <Space>w :action GotoNextError<CR>
+nnoremap <c-f> :action GotoNextError<CR>
 nnoremap <Space>b :action GotoPreviousError<CR>
+nnoremap <c-b> :action GotoPreviousError<CR>
 nnoremap <Space>u :action FindUsages<CR>
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 "nnoremap <Space>u :action ShowUsages<CR>
@@ -129,4 +131,3 @@ nnoremap <Space>kn :action RunContextGroup<CR>
 nnoremap <leader>n :action RunContextGroup<CR>
 nnoremap <Space>km :action MakeGradleProject<CR>
 endif
-set clipboard+=ideaput
