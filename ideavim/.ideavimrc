@@ -99,17 +99,23 @@ nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 "Refactor
 nnoremap <Space>n :action Inline<CR>
 vnoremap <Space>n :action Inline<CR>
+
+"Extract Method
 nnoremap <Space>m :action ExtractMethod<CR>
 nnoremap <c-m> :action ExtractMethod<CR>
 vnoremap <Space>m :action ExtractMethod<CR>
 vnoremap <c-m> :action ExtractMethod<CR>
+
 nnoremap <Space>v :action IntroduceVariable<CR>
 vnoremap <Space>v :action IntroduceVariable<CR>
 nnoremap <Space>i :action ShowIntentionActions<CR>
 nnoremap <c-i> :action ShowIntentionActions<CR>
 nnoremap <Space>e :action ReformatCode<CR>
+
+"Rename
 nnoremap <Space>r :action RenameElement<CR>
 nnoremap <c-r> :action RenameElement<CR>
+
 nmap U :action $Redo<CR>
 nnoremap <Space>p :action IntroduceParameter<CR>
 nnoremap <Space>c :action ExtractClass<CR>
