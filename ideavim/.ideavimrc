@@ -17,6 +17,8 @@ nmap <c-l> <c-w>l
 set clipboard=unnamed
 map Y y$
 map D d$
+vmap p "_dp
+
 set ignorecase
 set smartcase
 "set nu
@@ -42,6 +44,8 @@ set NERDTree
 set clipboard+=ideaputset ideajoinset clipboard+=ideaput
 set quickscope
 "set multicursor
+:set keep-english-in-normal
+
 
 nmap H :action PreviousTab<CR>
 nmap L :action NextTab<CR>
