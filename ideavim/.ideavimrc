@@ -17,7 +17,7 @@ nmap <c-l> <c-w>l
 set clipboard=unnamed
 map Y y$
 map D d$
-vmap p "_dp
+"vmap p "_dp
 
 set ignorecase
 set smartcase
@@ -44,8 +44,8 @@ set NERDTree
 set clipboard+=ideaputset ideajoinset clipboard+=ideaput
 set quickscope
 "set multicursor
-:set keep-english-in-normal
-
+":set keep-english-in-normal
+:set keep-english-in-normal-and-restore-in-insert
 
 nmap H :action PreviousTab<CR>
 nmap L :action NextTab<CR>
@@ -86,6 +86,7 @@ nnoremap <leader>d :action ChooseDebugConfiguration<CR>
 nnoremap <leader>s :action FileStructurePopup<CR>
 nnoremap <Space>kr :action RunAnything<CR>
 nnoremap <Space>kn :action ContextRun<CR>
+nnoremap <Space>kl :action Git.Pull<CR>
 nnoremap <Space>kc :action RunClass<CR>
 nnoremap <Space>f :action GotoFile<CR>
 nnoremap <leader>a :action GotoAction<CR>
