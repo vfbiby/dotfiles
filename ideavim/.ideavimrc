@@ -116,6 +116,8 @@ vnoremap <Space>v :action IntroduceVariable<CR>
 nnoremap <Space>i :action ShowIntentionActions<CR>
 nnoremap <c-i> :action ShowIntentionActions<CR>
 nnoremap <Space>e :action ReformatCode<CR>
+nnoremap <Space>l :action ReformatCode<CR>
+nnoremap <Space>o :action Move<CR>
 
 "Rename
 nnoremap <Space>r :action RenameElement<CR>
