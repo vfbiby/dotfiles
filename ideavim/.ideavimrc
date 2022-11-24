@@ -84,7 +84,8 @@ nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <leader>c :action ChooseRunConfiguration<CR>
 nnoremap <leader>d :action ChooseDebugConfiguration<CR>
 nnoremap <leader>s :action FileStructurePopup<CR>
-nnoremap <Space>kr :action RunAnything<CR>
+nnoremap <Space>ka :action RunAnything<CR>
+nnoremap <Space>kr :action Rerun<CR>
 nnoremap <Space>kn :action ContextRun<CR>
 nnoremap <Space>kl :action Git.Pull<CR>
 nnoremap <Space>kc :action RunClass<CR>
