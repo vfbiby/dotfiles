@@ -44,8 +44,8 @@ set NERDTree
 set clipboard+=ideaputset ideajoinset clipboard+=ideaput
 set quickscope
 "set multicursor
-":set keep-english-in-normal
-:set keep-english-in-normal-and-restore-in-insert
+:set keep-english-in-normal
+":set keep-english-in-normal-and-restore-in-insert
 
 nmap H :action PreviousTab<CR>
 nmap L :action NextTab<CR>
@@ -89,10 +89,11 @@ nnoremap <Space>kr :action Rerun<CR>
 nnoremap <Space>kn :action ContextRun<CR>
 nnoremap <Space>kl :action Git.Pull<CR>
 nnoremap <Space>kc :action RunClass<CR>
+nnoremap <Space>kf :action RerunFailedTests<CR>
+nnoremap <Space>ks :action Console.Jdbc.Execute<CR>
 nnoremap <Space>f :action GotoFile<CR>
 nnoremap <leader>a :action GotoAction<CR>
 nnoremap <leader>h :action HideAllWindows<CR>
-nnoremap <Space>kf :action RerunFailedTests<CR>
 nnoremap <Space>w :action GotoNextError<CR>
 nnoremap <c-f> :action GotoNextError<CR>
 nnoremap <Space>b :action GotoPreviousError<CR>
@@ -131,13 +132,15 @@ nnoremap <Space>c :action ExtractClass<CR>
 nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 nnoremap <Space>kh :action TypeHierarchy<CR>
 
-
 "nnoremap gc :action GotoClass<CR>
 nnoremap gI :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 
 nnoremap <leader>f :action FindInPath<CR>
+
+nnoremap <leader>x :action CodeCompletion<CR>
+inoremap <c-x> :action CodeCompletion<CR>
 
 if &ide =~? 'intellij idea'
 nnoremap <leader>r :action ExternalSystem.ProjectRefreshAction<CR>
@@ -151,3 +154,4 @@ nnoremap <Space>kn :action RunContextGroup<CR>
 nnoremap <leader>n :action RunContextGroup<CR>
 nnoremap <Space>km :action MakeGradleProject<CR>
 endif
+set clipboard^=ideaput
