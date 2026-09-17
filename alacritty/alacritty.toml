@@ -48,7 +48,8 @@ option_as_alt = "Both"
 # ---- 配色：Zed One Dark（与 Zed 编辑器观感一致）-------
 [colors.primary]
 background = "#282C33"
-foreground = "#ABB2BF"
+# 前景提亮（沿用旧配置的近白色，One Dark 原配 #ABB2BF 偏灰）
+foreground = "#F2F2F5"
 
 [colors.normal]
 black = "#282C34"
@@ -58,7 +59,7 @@ yellow = "#E5C07B"
 blue   = "#61AFEF"
 magenta = "#C678DD"
 cyan   = "#56B6C2"
-white  = "#ABB2BF"
+white  = "#E8E8ED"
 
 [colors.bright]
 black = "#5C6370"
@@ -72,10 +73,10 @@ white  = "#FFFFFF"
 
 [colors.cursor]
 text   = "#282C33"
-cursor = "#ABB2BF"
+cursor = "#F2F2F5"
 
 [colors.selection]
-text = "#ABB2BF"
+text = "#F2F2F5"
 background = "#3E4451"
 
 [colors.search.matches]
