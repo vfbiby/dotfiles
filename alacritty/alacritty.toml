@@ -1,0 +1,88 @@
+[font]
+size = 14.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
+[keyboard]
+bindings = [
+    # 换行: Shift+Enter 和 Cmd+Enter 映射为换行信号 \x1b\r
+    { key = "Return", mods = "Shift", chars = "\u001b\r" },
+    { key = "Return", mods = "Command", chars = "\u001b\r" },
+
+    # 删除: Cmd+Delete (Command+退格) 删除整行光标前内容 (\x15 即 Ctrl+U)
+    { key = "Backspace", mods = "Command", chars = "\u0015" },
+    { key = "Back", mods = "Command", chars = "\u0015" },
+
+    # 删除: Option+Delete (Option+退格) 向前删除一个词 (\x17 即 Ctrl+W 或 \x1b\x7f)
+    { key = "Backspace", mods = "Option", chars = "\u0017" },
+    { key = "Back", mods = "Option", chars = "\u0017" },
+
+    # 光标移动: Cmd+左/右键 跳转到行首/行尾 (\x01 即 Ctrl+A, \x05 即 Ctrl+E)
+    { key = "Left", mods = "Command", chars = "\u0001" },
+    { key = "Right", mods = "Command", chars = "\u0005" },
+
+    # 光标移动: Option+左/右键 按单词跳转 (\x1bb 即 Alt+b, \x1bf 即 Alt+f)
+    { key = "Left", mods = "Option", chars = "\u001bb" },
+    { key = "Right", mods = "Option", chars = "\u001bf" },
+]
+
+[window]
+decorations = "Transparent" # 完全去除 Windows 标题栏
+padding = { x = 6, y = 4 }
+option_as_alt = "Both"
+
+# ---- 配色：Zed One Dark（与 Zed 编辑器观感一致）-------
+[colors.primary]
+background = "#282C33"
+foreground = "#ABB2BF"
+
+[colors.normal]
+black = "#282C34"
+red   = "#E06C75"
+green = "#98C379"
+yellow = "#E5C07B"
+blue   = "#61AFEF"
+magenta = "#C678DD"
+cyan   = "#56B6C2"
+white  = "#ABB2BF"
+
+[colors.bright]
+black = "#5C6370"
+red   = "#E06C75"
+green = "#98C379"
+yellow = "#E5C07B"
+blue   = "#61AFEF"
+magenta = "#C678DD"
+cyan   = "#56B6C2"
+white  = "#FFFFFF"
+
+[colors.cursor]
+text   = "#282C33"
+cursor = "#ABB2BF"
+
+[colors.selection]
+text = "#ABB2BF"
+background = "#3E4451"
+
+[colors.search.matches]
+foreground = "#282C33"
+background = "#E5C07B"
+
+[colors.search.focused_match]
+foreground = "#282C33"
+background = "#98C379"
+
